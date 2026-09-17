@@ -98,9 +98,10 @@ in this repository; `kcpic.org` remains a future DNS/domain migration.
 
 Configured and verified on 2026-09-17 (keep these settings when maintaining the repository):
 
-- Settings → Branches → protection for `main`: require a pull request, one
-  non-author approval, dismiss stale approvals, require approval of the most
-  recent push, require conversation resolution, require **Website release gate**
+- Settings → Branches → protection for `main`: require a pull request with **zero required approvals**; disable approval of the
+  most recent push, code-owner approval, and stale-approval dismissal. The author
+  or most recent pusher may merge their own PR after checks pass. Require
+  conversation resolution, require **Website release gate**
   from the GitHub Actions app (app ID 15368), and require the branch to be up to date.
   Enforce for administrators, allow no PR bypass actors, and disallow force pushes
   and deletion. Do not require the conditional validation job.
@@ -179,7 +180,8 @@ detection without writing a documentation-only output.
 
 GitHub branch protection was applied and read back: the required gate is tied to
 GitHub Actions, strict/up-to-date checks and administrator enforcement are enabled,
-and one fresh non-author approval is required. Pages remains Actions-based and its
+and pull requests require no separate reviewer approval. The author or most recent
+pusher may merge once the required checks pass. Pages remains Actions-based and its
 environment only accepts `main`. Production remains unchanged during this task.
 PR CI verifies the hosted runner path; actual deployment ordering, OIDC publishing,
 and the production documentation-only/pending-release scenarios still need to be
