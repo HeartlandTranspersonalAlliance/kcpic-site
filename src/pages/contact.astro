@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../data/site';
+---
+<Layout title="Contact" description="Contact the Kansas City Psychedelic Integration Circle at info@kcpic.org or connect with our Facebook group.">
+<section class="page-intro"><div class="container"><p class="eyebrow">Let's connect</p><h1>Contact Us</h1><p class="lead wide-prose">Find us on Facebook, or send us a message if you have questions!</p></div></section>
+<section class="section"><div class="container contact-grid"><a class="contact-card" href={`mailto:${site.email}`}><span class="contact-icon" aria-hidden="true">↗</span><p class="eyebrow">Send us a message</p><h2>Email the circle</h2><span class="contact-address">{site.email}</span></a><a class="contact-card contact-facebook" href={site.facebook}><span class="contact-icon" aria-hidden="true">↗</span><p class="eyebrow">Connect with the community</p><h2>KCPIC on Facebook</h2><span class="contact-address">Visit our Facebook group</span></a></div></section>
+</Layout>

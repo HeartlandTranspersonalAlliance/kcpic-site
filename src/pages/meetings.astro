@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { home } from '../data/content';
+import { site, href } from '../data/site';
+import Mark from '../components/Mark.astro';
+---
+<Layout title="Meetings" description="Join our monthly Kansas City psychedelic integration circle. Find current event dates and locations in our Facebook group.">
+<section class="page-intro"><div class="container"><p class="eyebrow">Come as you are</p><h1>Upcoming Meetings</h1><p class="lead wide-prose">{home.introduction}</p></div></section>
+<section class="section"><div class="container meeting-grid"><div class="meeting-panel"><Mark /><p class="eyebrow">Once a month · Kansas City</p><h2>Find the next circle.</h2><p>See our Facebook group for more details on events and locations.</p><a class="button" href={site.facebook}>View meetings on Facebook <span aria-hidden="true">↗</span></a></div><div class="meeting-notes"><p class="eyebrow">Before you join</p><h2>A community<br />of peers.</h2><p>{home.invitation}</p><a class="text-link" href={href('about/#community-agreements')}>Read our community agreements <span aria-hidden="true">→</span></a><p class="meeting-contact">Have a question? <a href={`mailto:${site.email}`}>{site.email}</a></p></div></div></section>
+</Layout>

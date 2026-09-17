@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Join from '../components/Join.astro';
+import { about, agreements } from '../data/content';
+---
+<Layout title="About" description="Get to know our Kansas City integration circle and the community agreements that support a safe, non-judgmental space.">
+<section class="page-intro"><div class="container"><p class="eyebrow">About the circle</p><h1>Who we are</h1><p class="lead wide-prose">{about}</p></div></section>
+<section class="section agreements-section" id="community-agreements"><div class="container agreements-grid"><div class="section-aside"><p class="eyebrow">A shared understanding</p><h2>Community<br />Agreements</h2><p>Our space.<br />Our shared responsibility.</p></div><div><div class="agreements">{agreements.map(a => <article><h3>{a.title}</h3><p>{a.text}</p></article>)}</div><p class="attribution">(gratitude to Tam Integration for the agreements 🙏)</p></div></div></section><Join />
+</Layout>
