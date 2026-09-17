@@ -3,7 +3,35 @@ import Layout from '../layouts/Layout.astro';
 import Join from '../components/Join.astro';
 import { resources } from '../data/content';
 ---
-<Layout title="Community Resources" description="Explore psychedelic community resources in Kansas City and greater Missouri.">
-<section class="page-intro"><div class="site-container"><p class="eyebrow">In good company</p><h1>Community Resources</h1><p class="lead wide-prose">Explore the links below to find other psychedelic resources in the Kansas City area and greater Missouri.</p></div></section>
-<section class="section resources-section"><div class="site-container resource-list">{resources.map(r => <a class="resource-link" href={r.url}><span><h2>{r.name}</h2><span class="resource-domain">{r.domain}</span></span><span class="resource-arrow" aria-hidden="true">↗</span></a>)}</div></section><Join />
+
+<Layout
+  title="Community Resources"
+  description="Explore psychedelic community resources in Kansas City and greater Missouri."
+>
+  <section class="page-intro">
+    <div class="site-container">
+      <p class="eyebrow">In good company</p>
+      <h1>Community Resources</h1>
+      <p class="lead wide-prose">
+        Explore the links below to find other psychedelic resources in the
+        Kansas City area and greater Missouri.
+      </p>
+    </div>
+  </section>
+  <section class="section resources-section">
+    <div class="site-container resource-list">
+      {resources.map((r) => (
+        <a class="resource-link" href={r.url}>
+          <span>
+            <h2>{r.name}</h2>
+            <span class="resource-domain">{r.domain}</span>
+          </span>
+          <span class="resource-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <Join />
 </Layout>
