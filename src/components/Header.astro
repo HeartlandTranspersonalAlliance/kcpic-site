@@ -5,7 +5,7 @@ const active = Astro.url.pathname.replace(/\/$/, '');
 ---
 <header class="site-header">
   <div class="site-container header-inner">
-    <a class="brand" href={href()} aria-label="Kansas City Psychedelic Integration Circle home"><Mark /><span><strong>Kansas City</strong><span>Psychedelic Integration Circle</span></span></a>
+    <a class="brand" href={href()} aria-label="Kansas City Psychedelic Integration Circle home"><Mark /><span><strong>Kansas City</strong>{' '}<span>Psychedelic Integration Circle</span></span></a>
     <nav class="desktop-nav" aria-label="Main navigation">{nav.map(item => <a href={href(item.path)} aria-current={active === href(item.path).replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a>)}</nav>
     <details class="mobile-nav"><summary>Menu <span aria-hidden="true">＋</span></summary><nav aria-label="Mobile navigation">{nav.map(item => <a href={href(item.path)} aria-current={active === href(item.path).replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a>)}</nav></details>
   </div>

@@ -21,3 +21,7 @@ Implemented the reported fixes and optional standardization while preserving the
 - Checked all five pages at 320, 390, 440, 441, 640, 768, 800, 820, 850, 851, 900, 1024, 1100, 1101, 1280 and 1440px (80 combinations): no overflow, supporting labels at least 12px, no unintended container max-width.
 - Mobile menu still opens with Enter and moves focus to About with Tab. Existing Astro check, production build and output tests passed.
 - The audit's unverified checks were explicitly excluded from this implementation; they remain unverified.
+
+## Automated semantic follow-up
+
+Removed the unsupported aria-label from the generic homepage values strip and inserted explicit whitespace between the brand text nodes in Header and Footer. Axe 4.13.0 passed at 390px and 1440px with the experimental label-content-name-mismatch rule explicitly enabled. No violations or semantic manual-review flags remain; decorative-arrow contrast flags still require interpretation. Astro check, build and existing output tests pass.

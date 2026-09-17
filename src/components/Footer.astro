@@ -3,6 +3,6 @@ import { href, nav, site } from '../data/site';
 import Mark from './Mark.astro';
 ---
 <footer class="site-footer"><div class="site-container">
-  <div class="footer-main"><a class="brand" href={href()}><Mark /><span><strong>Kansas City</strong><span>Psychedelic Integration Circle</span></span></a><nav aria-label="Footer navigation">{nav.map(item => <a href={href(item.path)}>{item.label}</a>)}</nav></div>
+  <div class="footer-main"><a class="brand" href={href()}><Mark /><span><strong>Kansas City</strong>{' '}<span>Psychedelic Integration Circle</span></span></a><nav aria-label="Footer navigation">{nav.map(item => <a href={href(item.path)}>{item.label}</a>)}</nav></div>
   <div class="footer-bottom"><span>Connection. Community. Integration.</span><a href={`mailto:${site.email}`}>{site.email}</a><a href={site.facebook}>KCPIC on Facebook <span aria-hidden="true">↗</span></a></div>
 </div></footer>
