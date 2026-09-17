@@ -13,6 +13,7 @@
 ## Audit follow-up — September 17, 2026
 
 Implemented the reported fixes and optional standardization while preserving the original copy and design identity:
+
 - Scoped light focus color to dark CTA bands; measured contrast is now 9.28:1. Verified keyboard focus on About and Community Resources.
 - Moved the element margin reset into Tailwind's base layer; 404 paragraph now computes to 24px top and 32px bottom margins.
 - Renamed the shared wrapper to site-container, removing Tailwind's unintended max-width constraints.
