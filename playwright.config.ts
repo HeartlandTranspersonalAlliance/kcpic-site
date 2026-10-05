@@ -7,10 +7,10 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 0,
-  workers: process.env.CI ? 2 : undefined,
+  workers: 1,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: 'http://127.0.0.1:4325/kcpic-site/',
+    baseURL: `http://127.0.0.1:4325${(process.env.BASE_PATH || '/kcpic-site').replace(/\/$/, '')}/`,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     launchOptions: process.env.PLAYWRIGHT_EXECUTABLE_PATH
@@ -23,7 +23,7 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run preview -- --host 127.0.0.1 --port 4325 --ignore-lock',
-    url: 'http://127.0.0.1:4325/kcpic-site/',
+    url: `http://127.0.0.1:4325${(process.env.BASE_PATH || '/kcpic-site').replace(/\/$/, '')}/`,
     reuseExistingServer: false,
     timeout: 30000,
   },
