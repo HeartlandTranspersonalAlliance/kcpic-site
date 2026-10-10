@@ -19,6 +19,13 @@ Source: https://www.kc-psychedelic.com/ and its /about, /meetings, /community-re
 - Added a concise Facebook explanation, search descriptions, 404 text, and image alternatives.
 - The original “What is Psychedelic Integration?” heading remains. Its text describes the community rather than defining integration; a definition could be considered later, but none has been invented here.
 
+## Copy update — October 10, 2026
+
+- Updated the homepage and About copy to focus on monthly, confidential, community-led integration of profound or challenging experiences into everyday life. Removed explicit substance references from the general prose while retaining the organization’s name and resource names.
+- Replaced the homepage eyebrow, image caption, values labels, and About agreements introduction with more natural wording.
+- Changed the integration heading and definition to match the broader focus, and updated meeting and resource descriptions.
+- Expanded the buying and selling agreement to prohibit sourcing, including requests for suppliers and supplier introductions, in both the circle and online group.
+
 ## Image provenance
 
 The original website labels these assets as Unsplash images. Reused from the user's existing site; original remote URLs retained here. Images are optimized locally by Astro, never hotlinked.
