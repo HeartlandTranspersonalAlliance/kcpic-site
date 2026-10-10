@@ -2,7 +2,8 @@ import { test as base, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 const origin = 'http://127.0.0.1:4325';
-const prefix = '/kcpic-site/';
+const prefix =
+  (process.env.BASE_PATH || '/kcpic-site').replace(/\/$/, '') + '/';
 const facebook = 'https://www.facebook.com/groups/kcpsychedelic';
 const routes = [
   ['', /Kansas City.*Integration Circle/s],
@@ -87,9 +88,10 @@ for (const [route, heading] of routes) {
     for (const href of new Set(links)) {
       const url = new URL(href);
       if (url.origin !== origin) continue;
-      expect(url.pathname, 'Internal links retain the Pages base').toMatch(
-        /^\/kcpic-site\//,
-      );
+      expect(
+        url.pathname.startsWith(prefix),
+        'Internal links retain the Pages base',
+      ).toBe(true);
       const response = await page.request.get(url.href);
       expect(response.ok(), `Broken internal link: ${href}`).toBe(true);
       if (url.hash) {
