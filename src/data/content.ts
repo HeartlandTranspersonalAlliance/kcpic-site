@@ -1,16 +1,16 @@
-// Original wording from kc-psychedelic.com, captured September 17, 2026.
+// Adapted from kc-psychedelic.com, captured September 17, 2026.
 // Intentional migration changes are documented in docs/content-migration.md.
 export const home = {
   welcome: 'Welcome to the Kansas City Psychedelic Integration Circle!',
   introduction:
-    'Our supportive community meets once a month to discuss psychedelic experiences from all kinds of modalities (breathwork, spiritual practice, meditation, psychedelic substances, etc.). Drop in any month to connect and share in a safe, judgement-free space.',
+    'We host monthly, confidential integration circles to discuss profound or challenging experiences and explore how to bring what we learn into everyday life in healthy, sustainable ways. Drop in to share your experiences, listen to others, and offer reflections when they’re welcome.',
   invitation:
-    'Whether you’re new to psychedelics and altered states of consciousness or an experienced explorer, our gatherings offer a warm and safe environment for sharing insights and fostering connections. Join us and connect with like-minded individuals who share your passion for exploration and healing.',
+    'Integration is the process of making sense of profound or challenging experiences and finding ways to apply their lessons in everyday life. Our community-led circles offer a welcoming, non-judgmental space to reflect together, share insights, and connect with others.',
   belief:
-    'We believe healing and processing happens in community and the act of sharing the deep experiences that are often hard to communicate helps to shed light on the lessons and take-aways from these experiences.',
+    'Sharing experiences that are hard to put into words can help us understand them more clearly. By listening to one another, we make room for new perspectives and practical ways to move forward.',
 };
 export const about =
-  "Welcome to our community psychedelic integration circle! We're so glad you're here ❤ The intention of this group is to create a safe space for us to share and process experiences that are outside the ordinary within a supportive and non-judgmental community of peers. This is also a place to share resources and meet like-minded folks. Please read and respect our community agreements (below) so that we all can have a safe and uplifting experience here.";
+  'Welcome to our community-led integration circle! We’re glad you’re here. We meet to share and reflect on profound or challenging experiences in a confidential, supportive, non-judgmental setting. You’re welcome to share your story, listen, exchange resources, and connect with others. Our community agreements help everyone feel respected and heard.';
 export const agreements = [
   {
     title: 'Confidentiality',
@@ -33,8 +33,8 @@ export const agreements = [
     text: "We allow everyone time to talk. If we notice that we've been dominating the conversation, we step back and encourage people who are more soft-spoken to participate by creating space for them.",
   },
   {
-    title: "Don't Buy or Sell",
-    text: 'This is not a place to look for drugs or sell them.',
+    title: 'No Buying, Selling, or Sourcing',
+    text: 'Buying, selling, or sourcing drugs is not allowed in the circle or our online group. Please don’t ask where to obtain them, offer them for sale, or connect others with suppliers.',
   },
 ];
 export const resources = [

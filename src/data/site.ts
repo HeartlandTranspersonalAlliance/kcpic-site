@@ -3,7 +3,7 @@ export const site = {
   email: 'info@kcpic.org',
   facebook: 'https://www.facebook.com/groups/kcpsychedelic',
   description:
-    'A supportive community in Kansas City for sharing and processing psychedelic experiences. Connect at our monthly integration circle.',
+    'Monthly, confidential, community-led integration circles in Kansas City for reflecting on profound or challenging experiences and bringing their lessons into everyday life.',
 };
 export const nav = [
   { label: 'About', path: 'about/' },
