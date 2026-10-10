@@ -14,7 +14,7 @@ export const about =
 export const agreements = [
   {
     title: 'Confidentiality',
-    text: "We don't talk about what is discussed in the circle (Facebook group, online or in-person meetings) outside of the circle. Screen shots sharing is strictly prohibited in order to protect the safety of group members.",
+    text: "We don't talk about what is discussed in the circle (Facebook group, online or in-person meetings) outside of the circle.",
   },
   {
     title: 'Anonymity',
