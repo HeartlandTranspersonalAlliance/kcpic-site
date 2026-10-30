@@ -29,10 +29,15 @@ const active = Astro.url.pathname.replace(/\/$/, '');
       ))}
     </nav>
     <details class="mobile-nav">
-      <summary>
+      <summary
+        id="mobile-nav-toggle"
+        role="button"
+        aria-controls="mobile-navigation"
+        aria-expanded="false"
+      >
         Menu <span aria-hidden="true">＋</span>
       </summary>
-      <nav aria-label="Mobile navigation">
+      <nav id="mobile-navigation" aria-label="Mobile navigation">
         {nav.map((item) => (
           <a
             href={href(item.path)}
@@ -47,3 +52,19 @@ const active = Astro.url.pathname.replace(/\/$/, '');
     </details>
   </div>
 </header>
+
+<script>
+  const mobileNav = document.querySelector<HTMLDetailsElement>('.mobile-nav');
+  const mobileNavToggle =
+    mobileNav?.querySelector<HTMLElement>('#mobile-nav-toggle');
+
+  const syncMobileNavState = () => {
+    mobileNavToggle?.setAttribute(
+      'aria-expanded',
+      String(mobileNav?.open ?? false),
+    );
+  };
+
+  mobileNav?.addEventListener('toggle', syncMobileNavState);
+  syncMobileNavState();
+</script>
